@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Personel Ekle";
+    Layout = "_Layout";
+}
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="~/css/employee/employee.css" asp-append-version="true" />
+</head>
+
+<h1>Personel Ekle</h1>
+<section class="add-person-container">
+    <header>Personel Kayıt Formu</header>
+    <form action="#" class="form">
+        <div class="input-box">
+            <label>İsim Soyisim</label>
+            <input type="text" placeholder="İsim Soyisim Giriniz" required />
+        </div>
+        <div class="input-box">
+            <label>E-Posta Adresi</label>
+            <input type="text" placeholder="E-Posta Adresinizi Giriniz" required />
+        </div>
+        <div class="column">
+            <div class="input-box">
+                <label>Telefon Numarası</label>
+                <input type="number" placeholder="Telefon Numaranızı Giriniz" required />
+            </div>
+            <div class="input-box">
+                <label>Doğum Günü</label>
+                <input type="date" placeholder="Enter birth date" required />
+            </div>
+        </div>
+        <div class="gender-box">
+            <h3>Cinsiyet</h3>
+            <div class="gender-option">
+                <div class="gender">
+                    <input type="radio" id="check-male" name="gender" checked />
+                    <label for="check-male">Erkek</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" id="check-female" name="gender" />
+                    <label for="check-female">Kadın</label>
+                </div>
+            </div>
+        </div>
+        <div class="input-box address">
+            <label>İkametgah Adresi</label>
+            <input type="text" placeholder="Mahalle Bilgisini Giriniz" required />
+            <input type="text" placeholder="Sokak ve diğer bilgileri giriniz" required />
+            <div class="column">
+                <div class="select-box">
+                    <select>
+                        <option hidden>Ülke</option>
+                        <option>Türkiye</option>
+                        <option>Avrupa Vatandaşı</option>
+                        <option>Amerikan Kıtası Vatandaşı</option>
+                        <option>Orta Doğu Vatandaşı</option>
+                        <option>Asya Vatandaşı</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="İl" required />
+            </div>
+            <div class="column">
+                <input type="text" placeholder="İlçe" required />
+                <input type="number" placeholder="Posta Kodu" required />
+            </div>
+
+        </div>
+        <div class="input-box">
+            <label>Çalışma Bilgileri</label>
+            <div class="column">
+                <div class="select-box">
+                    <select>
+                        <option hidden>Çalışacağı Birim</option>
+                        <option>Bilgi İşlem</option>
+                        <option>Hizmet Birimi</option>
+                        <option>Destek Birimi</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Ünvan" required />
+            </div>
+        </div>
+        <button type="submit">Ekle</button>
+    </form>
+</section>
+
+
+<div class="recent-orders">
+    <h2>Eklenen Son 5 Personel</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ad Soyad</th>
+                <th>Birimi</th>
+                <th>İşe Başlama Tarih</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#IT-12052010-FC00</td>
+                <td>Ferhat ÇAKMAKOĞLU</td>
+                <td>Bilgi İşlem</td>
+                <td>12.05.2010</td>
+                <td class="primary">Detaylar</td>
+            </tr>
+            <tr>
+                <td>#SE-05062015-FC00</td>
+                <td>Oğuz Alp ARSLAN</td>
+                <td>Hizmet Birimi</td>
+                <td>05.06.2015</td>
+                <td class="primary">Detaylar</td>
+            </tr>
+            <tr>
+                <td>#SU-07092020-FC00</td>
+                <td>Hakan TANRIKULU</td>
+                <td>Destek Birimi</td>
+                <td>07.09.2020</td>
+                <td class="primary">Detaylar</td>
+            </tr>
+            <tr>
+                <td>#SU-07092020-FC00</td>
+                <td>Hakan TANRIKULU</td>
+                <td>Destek Birimi</td>
+                <td>07.09.2020</td>
+                <td class="primary">Detaylar</td>
+            </tr>
+            <tr>
+                <td>#SU-07092020-FC00</td>
+                <td>Hakan TANRIKULU</td>
+                <td>Destek Birimi</td>
+                <td>07.09.2020</td>
+                <td class="primary">Detaylar</td>
+            </tr>
+        </tbody>
+    </table>
+    <a asp-action="EmployeeList" asp-controller="Employee">Tüm Personelleri Gör</a>
+</div>

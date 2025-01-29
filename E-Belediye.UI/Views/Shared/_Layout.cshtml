@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Belediye</title>
+    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/right-side/rightSide.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout/layout.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="~/assets/sample-icons/logo.png">
+                    <h2><span class="danger">E-</span>Belediye</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="menu-item">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <a style="color:var(--color-info-dark)" asp-action="Index" asp-controller="Home">Dashboard</a>
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Personel İşlemleri</h3>
+                    <div class="submenu">
+                        <a asp-action="Index" asp-controller="Employee">Detaylar</a>
+                        <a asp-action="AddEmployee" asp-controller="Employee">Personel İşlemleri</a>
+                        <a asp-action="EmployeeList" asp-controller="Employee">Personel Listele</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <a style="color:var(--color-info-dark)" asp-action="Index" asp-controller="PastTransactions">Geçmiş İşlemler</a>
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <a style="color:var(--color-info-dark)" asp-action="Index" asp-controller="Analysis">Analizler</a>
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                    <a style="color:var(--color-info-dark)" asp-action="Index" asp-controller="MessageBox">Gelen Kutusu</a>
+                    <span class="message-count">27</span>
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <a style="color:var(--color-info-dark)" asp-action="Index" asp-controller="TaskProcess">Görev İşlemleri </a>
+                </div>
+                <div>
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Çıkış Yap</h3>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            @RenderBody()
+        </main>
+
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode" id="dark-theme">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hoşgeldin, <b>Ferhat</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="~/assets/sample-icons/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="~/assets/sample-icons/logo.png">
+                    <h2><span class="danger">E-</span>Belediye</h2>
+                    <p>Developed by INNOSA Tech &copy; </p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Hatırlatıcılar</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Atölye Bakım Çalışması</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Rapor Hazırlama</h3>
+                            <small class="text_muted">
+                                12:30 PM - 13:30 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Hatırlatıcı Ekle</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="~/js/layout/layout.js" asp-append-version="true"></script>
+    <script src="~/js/right-side/rightSide.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    -->
+
+    @* @await RenderSectionAsync("Scripts", required: false) *@
+</body>
+</html>

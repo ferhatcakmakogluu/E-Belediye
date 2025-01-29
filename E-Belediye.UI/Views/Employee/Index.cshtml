@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Personel İşlemleri";
+    Layout = "_Layout";
+}
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="~/css/employee/employee.css" asp-append-version="true" />
+</head>
+<h1>Personel İşlemleri</h1>
+
+<div class="analyse">
+    <div class="sales">
+        <div class="status">
+            <div class="info">
+                <h3>Toplam Personel Sayısı</h3>
+                <h1>3685</h1>
+            </div>
+            <div class="progresss">
+                <svg>
+                    <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="percentage">
+                    <p>+81%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="visits">
+        <div class="status">
+            <div class="info">
+                <h3>Beyaz Yaka Personel Sayısı</h3>
+                <h1>850</h1>
+            </div>
+            <div class="progresss">
+                <svg>
+                    <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="percentage">
+                    <p>94%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="searches">
+        <div class="status">
+            <div class="info">
+                <h3>Mavi Yaka Personel Sayısı</h3>
+                <h1>2835</h1>
+            </div>
+            <div class="progresss">
+                <svg>
+                    <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="percentage">
+                    <p>+21%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="personel-chart">
+    <canvas id="personelChart"></canvas>
+    <script src="~/js/employee/employee.js"></script>
+</div>

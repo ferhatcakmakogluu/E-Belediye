@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_Layout";
+}
+
+
+<h1>Gösterge Paneli</h1>
+<!-- Analyses -->
+<div class="analyse">
+    <div class="sales">
+        <div class="status">
+            <div class="info">
+                <h3>Günlük Trafik</h3>
+                <h1>65,024</h1>
+            </div>
+            <div class="progresss">
+                <svg>
+                    <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="percentage">
+                    <p>+81%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="visits">
+        <div class="status">
+            <div class="info">
+                <h3>Aktif Oturum Sayısı</h3>
+                <h1>389</h1>
+            </div>
+            <div class="progresss">
+                <svg>
+                    <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="percentage">
+                    <p>94%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="searches">
+        <div class="status">
+            <div class="info">
+                <h3>Personel Sayısı</h3>
+                <h1>3685</h1>
+            </div>
+            <div class="progresss">
+                <svg>
+                    <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="percentage">
+                    <p>+21%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Analyses -->
+<!-- New Users Section -->
+<div class="new-users">
+    <h2>Hızlı Kullanıcı Ekleme</h2>
+    <div class="user-list">
+        <div class="user">
+            <img src="~/assets/sample-icons/profile-1.jpg">
+            <h2>Ferhat ÇAKMAKOĞLU</h2>
+            <p>54dk Önce Aktifti</p>
+        </div>
+        <div class="user">
+            <img src="~/assets/sample-icons/profile-1.jpg">
+            <h2>Oğuz Alp ARSLAN</h2>
+            <p>10dk Önce Aktifti</p>
+        </div>
+        <div class="user">
+            <img src="~/assets/sample-icons/profile-1.jpg">
+            <h2>Hakan TANRIKULU</h2>
+            <p>2 saat Önce Aktifti</p>
+        </div>
+        <div class="user">
+            <img src="~/assets/sample-icons/plus.png">
+            <h2>Ekleme yap</h2>
+            <p>Kullanıcı Ekle</p>
+        </div>
+    </div>
+</div>
+<!-- End of New Users Section -->
+<!-- Recent Orders Table -->
+<div class="recent-orders">
+    <h2>Son İşlemler</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>İşlem ID</th>
+                <th>İşlem Tipi</th>
+                <th>İşlem Yapan</th>
+                <th>Tarih</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#018596321</td>
+                <td>Su Faturası Ödeme</td>
+                <td>Ferhat ÇAKMAKOĞLU</td>
+                <td>27.01.2025 - 10:57</td>
+                <td class="primary">Detaylar</td>
+            </tr>
+            <tr>
+                <td>#589654123</td>
+                <td>Elektrik Faturası Ödeme</td>
+                <td>Oğuz Alp ARSLAN</td>
+                <td>26.01.2025 - 15:57</td>
+                <td class="primary">Detaylar</td>
+            </tr>
+            <tr>
+                <td>#364178521</td>
+                <td>Doğalgaz Faturası Ödeme</td>
+                <td>Hakan TANRIKULU</td>
+                <td>24.01.2025 - 13:57</td>
+                <td class="primary">Detaylar</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="#">Tüm İşlemleri Görüntüle</a>
+</div>
+<!-- End of Recent Orders -->

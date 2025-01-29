@@ -1,0 +1,223 @@
+﻿aside {
+    height: 100vh;
+}
+
+    aside .toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1.4rem;
+    }
+
+        aside .toggle .logo {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+            aside .toggle .logo img {
+                width: 2rem;
+                height: 2rem;
+            }
+
+        aside .toggle .close {
+            padding-right: 1rem;
+            display: none;
+        }
+
+    aside .sidebar {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-white);
+        box-shadow: var(--box-shadow);
+        border-radius: 15px;
+        height: 88vh;
+        position: relative;
+        top: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+        aside .sidebar:hover {
+            box-shadow: none;
+        }
+
+        aside .sidebar div {
+            display: flex;
+            align-items: center;
+            color: var(--color-info-dark);
+            height: 3.7rem;
+            gap: 1rem;
+            position: relative;
+            margin-left: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+            aside .sidebar div span {
+                font-size: 1.6rem;
+                transition: all 0.3s ease;
+            }
+
+            aside .sidebar div:last-child {
+                position: absolute;
+                bottom: 2rem;
+                width: 100%;
+            }
+
+            aside .sidebar div.active {
+                width: 100%;
+                color: var(--color-primary);
+                background-color: var(--color-light);
+                margin-left: 0;
+            }
+
+                aside .sidebar div.active::before {
+                    content: '';
+                    width: 6px;
+                    height: 18px;
+                    background-color: var(--color-primary);
+                }
+
+                aside .sidebar div.active span {
+                    color: var(--color-primary);
+                    margin-left: calc(1rem - 3px);
+                }
+
+            aside .sidebar div:hover {
+                color: var(--color-primary);
+            }
+
+                aside .sidebar div:hover span {
+                    margin-left: 0.6rem;
+                }
+
+        aside .sidebar .message-count {
+            background-color: var(--color-danger);
+            padding: 2px 6px;
+            color: var(--color-white);
+            font-size: 11px;
+            border-radius: var(--border-radius-1);
+        }
+
+    /*submenu*/
+
+    aside .menu-item {
+        display: flex;
+        align-items: flex-start;
+        color: var(--color-info-dark);
+        height: auto;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+    }
+
+.menu-item h3,
+.menu-item a{
+    margin: 0;
+}
+
+aside .menu-item .submenu {
+    display: none;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+    aside .menu-item .submenu a{
+        text-decoration: none;
+        color: var(--color-info-dark);
+        padding: 0.5rem 0;
+        display: block;
+    }
+
+.menu-item.active .submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    top: 25%;
+    left: 85%;
+    padding: var(--padding-1);
+    z-index: 999;
+    color: var(--color-dark);
+    background-color: rgba(132, 139, 200, 0.7);
+    border-radius: var(--border-radius-1);
+
+}
+    .menu-item.active .submenu a {
+        color: var(--color-dark);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+@media screen and (max-width: 1200px) {
+    aside .logo h2 {
+        display: none;
+    }
+
+    aside .sidebar h3,
+    aside .sidebar a
+    {
+        display: none;
+    }
+
+    aside .sidebar div {
+        width: 5.6rem;
+    }
+
+        aside .sidebar div:last-child {
+            position: relative;
+            margin-top: 1.8rem;
+        }
+}
+
+@media screen and (max-width: 768px) {
+    aside {
+        position: fixed;
+        background-color: var(--color-white);
+        width: 15rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        left: -100%;
+        display: none;
+        animation: showMenu 0.4s ease forwards;
+    }
+
+    @keyframes showMenu {
+        to {
+            left: 0;
+        }
+    }
+
+    aside .logo {
+        margin-left: 1rem;
+    }
+
+        aside .logo h2 {
+            display: inline;
+        }
+
+    aside .sidebar h3,
+    aside .sidebar a{
+        display: inline;
+    }
+
+    aside .sidebar div {
+        width: 100%;
+        height: 3.4rem;
+    }
+
+        aside .sidebar div:last-child {
+            position: absolute;
+            bottom: 5rem;
+        }
+
+    aside .toggle .close {
+        display: inline-block;
+        cursor: pointer;
+    }
+}

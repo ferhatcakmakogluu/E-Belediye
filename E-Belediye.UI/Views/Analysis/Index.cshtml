@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Analizler";
+    Layout = "_Layout";
+}
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="~/css/analysis/analysis.css" asp-append-version="true" />
+</head>
+<body>
+    <h1>Analizler</h1>
+
+    <div class="personelChartAnalysis">
+        <canvas id="personelChart"></canvas>
+        <script src="personel-analysis.js"></script>
+    </div>
+
+    <div class="processAnalysis">
+        <canvas id="operationsChart"></canvas>
+        <script src="process-analysis.js"></script>
+    </div>
+    
+    <script src="~/js/analysis/employeeAnalysis.js"></script>
+    <script src="~/js/analysis/processAnalysis.js"></script>
+</body>

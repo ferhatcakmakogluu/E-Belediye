@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Görev İşlemleri";
+    Layout = "_Layout";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/task-process/taskProcess.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Görev Yönetimi</h1>
+
+    <div class="task-process-div">
+        <form id="taskForm">
+            <label for="personel">Personel:</label>
+            <select id="personel" name="personel" required>
+                <option value="Ahmet">Ahmet</option>
+                <option value="Mehmet">Mehmet</option>
+                <option value="Ayşe">Ayşe</option>
+                <option value="Fatma">Fatma</option>
+            </select>
+
+            <label for="gorev">Görev:</label>
+            <input type="text" id="gorev" name="gorev" required>
+
+            <button type="submit">Görev Ata</button>
+        </form>
+
+    </div>
+    <!-- Görev Listesi -->
+    <div class="recent-orders task-table">
+        <h2>Görev Listesi</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Görev ID</th>
+                    <th>Ad Soyad</th>
+                    <th>Birimi</th>
+                    <th>Görev Başlama Tarihi</th>
+                    <th>Görev Bitiş Tarihi</th>
+                    <th>#</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="uncompleted">
+                    <td>#IT-12052010-FC00</td>
+                    <td>Ferhat ÇAKMAKOĞLU</td>
+                    <td>Bilgi İşlem</td>
+                    <td>12.05.2010</td>
+                    <td>12.05.2010</td>
+                    <td class="primary">Detaylar</td>
+                </tr>
+                <tr class="completed">
+                    <td>#SE-05062015-FC00</td>
+                    <td>Oğuz Alp ARSLAN</td>
+                    <td>Hizmet Birimi</td>
+                    <td>05.06.2015</td>
+                    <td>12.05.2010</td>
+                    <td class="primary">Detaylar</td>
+                </tr>
+                <tr>
+                    <td>#SU-07092020-FC00</td>
+                    <td>Hakan TANRIKULU</td>
+                    <td>Destek Birimi</td>
+                    <td>07.09.2020</td>
+                    <td>12.05.2010</td>
+                    <td class="primary">Detaylar</td>
+                </tr>
+                <tr>
+                    <td>#SU-07092020-FC00</td>
+                    <td>Hakan TANRIKULU</td>
+                    <td>Destek Birimi</td>
+                    <td>07.09.2020</td>
+                    <td>12.05.2010</td>
+                    <td class="primary">Detaylar</td>
+                </tr>
+                <tr>
+            </tbody>
+        </table>
+        <a href="#">1 - 2 - 3 - 4</a>
+    </div>
+
+    <script src="~/js/task-process/taskProcess.js"></script>
+</body>

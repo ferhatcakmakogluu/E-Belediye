@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Gelen Kutusu";
+    Layout = "_Layout";
+}
+<head>
+    <link rel="stylesheet" href="~/css/message-box/messageBox.css" />
+</head>
+<body>
+
+
+    <h1>Mesaj Kutusu</h1>
+
+    <div class="message-box">
+        <div class="message-header" id="messageHeader">Sohbet: </div>
+        <div class="messages" id="messages">
+            <!-- Gelen mesajlar burada görünecek -->
+        </div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Mesajınızı yazın...">
+            <button id="sendButton">Gönder</button>
+        </div>
+    </div>
+
+    <div class="inbox-list">
+        <h3>Gelen Kutusu</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mesaj ID</th>
+                    <th>Gönderen</th>
+                    <th>Birimi</th>
+                    <th>Gönderim Tarihi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="unreaded" data-message="Merhaba! Nasılsın?">
+                    <td>#859874</td>
+                    <td>Ferhat ÇAKMAKOĞLU</td>
+                    <td>Bilgi İşlem</td>
+                    <td>19.10.2024</td>
+                </tr>
+                <tr class="unreaded" data-message="Toplantı saatini hatırlatır mısın?">
+                    <td>#859875</td>
+                    <td>Ayşe YILMAZ</td>
+                    <td>İnsan Kaynakları</td>
+                    <td>20.10.2024</td>
+                </tr>
+                <tr data-message="Proje raporunu gönderebilir misin?">
+                    <td>#859876</td>
+                    <td>Mehmet KARA</td>
+                    <td>Finans</td>
+                    <td>21.10.2024</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/js/message-box/messageBox.js"></script>
+
+</body>
