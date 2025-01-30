@@ -15,5 +15,6 @@ namespace E_Belediye.Core.Entities
         public DateTime WorkStartDate { get; set; }
         public int PersonId { get; set; }
         public Person Person { get; set; }
+        public int WorkingUnitId { get; set; }
     }
 }

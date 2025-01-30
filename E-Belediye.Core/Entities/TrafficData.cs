@@ -10,10 +10,9 @@ namespace E_Belediye.Core.Entities
     {
         public int Id { get; set; }
         public string TrafficName { get; set; }
-        public int Count { get; set; }
         public DateTime Date { get; set; }
-        public int WorkingUnitId { get; set; }
+        public int EmployeeId { get; set; }
+        public Employee Employee { get; set; }
         public WorkingUnit WorkingUnit { get; set; }
-        public string EmployeeWorkingId { get; set; }
     }
 }
