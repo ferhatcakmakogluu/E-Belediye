@@ -8,6 +8,5 @@ namespace E_Belediye.Core.Entities
 {
     public class Manager : Employee
     {
-        public WorkingUnit WorkingUnit { get; set; }
     }
 }

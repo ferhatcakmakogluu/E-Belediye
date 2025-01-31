@@ -11,7 +11,7 @@ namespace E_Belediye.Core.Entities
         public int Id { get; set; }
         public string ReminderTitle { get; set; }
         public string ReminderType { get; set; }
-        public DateTime StartDate { get; set; } = DateTime.Now;
+        public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int EmployeeId { get; set; }
         public Employee Employee { get; set; }

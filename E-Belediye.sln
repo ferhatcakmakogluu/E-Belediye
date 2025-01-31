@@ -5,7 +5,11 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-Belediye.UI", "E-Belediye.UI\E-Belediye.UI.csproj", "{0B0A3B31-420C-4077-8264-E5F27FC3EB58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Belediye.Core", "E-Belediye.Core\E-Belediye.Core.csproj", "{EA641D91-FB4D-4065-AF3F-2D44302322AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-Belediye.Core", "E-Belediye.Core\E-Belediye.Core.csproj", "{EA641D91-FB4D-4065-AF3F-2D44302322AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Belediye.Repository", "E-Belediye.Repository\E-Belediye.Repository.csproj", "{D4D1E678-67E4-480E-93D8-540146B9D781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Belediye.API", "E-Belediye.API\E-Belediye.API.csproj", "{2FA3E46F-9885-4A85-B02B-D88263AFF6B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{EA641D91-FB4D-4065-AF3F-2D44302322AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA641D91-FB4D-4065-AF3F-2D44302322AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA641D91-FB4D-4065-AF3F-2D44302322AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D1E678-67E4-480E-93D8-540146B9D781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D1E678-67E4-480E-93D8-540146B9D781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D1E678-67E4-480E-93D8-540146B9D781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D1E678-67E4-480E-93D8-540146B9D781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA3E46F-9885-4A85-B02B-D88263AFF6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA3E46F-9885-4A85-B02B-D88263AFF6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA3E46F-9885-4A85-B02B-D88263AFF6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA3E46F-9885-4A85-B02B-D88263AFF6B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
